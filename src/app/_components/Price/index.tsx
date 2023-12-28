@@ -25,11 +25,10 @@ export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boo
       })
 
       if (priceType === 'recurring') {
-        price += `/${
-          parsed.recurring.interval_count > 1
-            ? `${parsed.recurring.interval_count} ${parsed.recurring.interval}`
-            : parsed.recurring.interval
-        }`
+        price += `/${parsed.recurring.interval_count > 1
+          ? `${parsed.recurring.interval_count} ${parsed.recurring.interval}`
+          : parsed.recurring.interval
+          }`
       }
     } catch (e) {
       console.error(`Cannot parse priceJSON`) // eslint-disable-line no-console
@@ -64,11 +63,13 @@ export const Price: React.FC<{
   return (
     <div className={classes.actions}>
       {typeof price?.actualPrice !== 'undefined' && price?.withQuantity !== '' && (
-        <div className={classes.price}>
+        <div className={classes.grid}>
           <p>{price?.withQuantity}</p>
+          {/* /////// */}
           {quantity > 1 && (
             <small className={classes.priceBreakdown}>{`${price.actualPrice} x ${quantity}`}</small>
           )}
+          {/* /////// */}
         </div>
       )}
       {button && button === 'addToCart' && (
