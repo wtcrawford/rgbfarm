@@ -1,6 +1,10 @@
 import { webpackBundler } from '@payloadcms/bundler-webpack' // bundler-import
 import { mongooseAdapter } from '@payloadcms/db-mongodb' // database-adapter-import
 import { payloadCloud } from '@payloadcms/plugin-cloud'
+// import { buildConfig } from "payload/config";
+// import Media from "./collections/Media";
+// import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
+// import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
 // import formBuilder from '@payloadcms/plugin-form-builder'
 import nestedDocs from '@payloadcms/plugin-nested-docs'
 import redirects from '@payloadcms/plugin-redirects'
@@ -29,12 +33,6 @@ import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
 import { priceUpdated } from './stripe/webhooks/priceUpdated'
 import { productUpdated } from './stripe/webhooks/productUpdated'
-
-
-// import { buildConfig } from "payload/config";
-// import Media from "./collections/Media";
-import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
-import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 
 const generateTitle: GenerateTitle = () => {
   return 'My Store'

@@ -6,5 +6,5 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', { endofline: 'auto' }],
     'no-console': 'off',
-  }
+  },
 }
