@@ -7,5 +7,8 @@ module.exports = {
     'prettier/prettier': 0,
     // 'prettier/prettier': ['error', { endofline: 'auto' }],
     'no-console': 'off',
+    "trailingComma": "all",
+    "eol-last": 0,
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
   },
 }
